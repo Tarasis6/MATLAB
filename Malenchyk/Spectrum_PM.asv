@@ -1,0 +1,8 @@
+Fs=1024;
+N=1024;
+F0=5;
+A0=0.5;
+mi=0.5;
+t=[0:N-1]/Fs;
+s=sin(2*pi*1*t).*sin(2*pi*F0*t+mi*sin(2*pi*t));
+plot(t,s);

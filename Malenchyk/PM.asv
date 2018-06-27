@@ -1,0 +1,21 @@
+Fs=1024;
+N=1024;
+fi=3;
+F0=15;
+A0=0.5;
+mi=pi/2;
+t=[0:N-1]/Fs;
+I=cos(cos(2*pi*fi*t)*mi);
+Q=sin(cos(2*pi*fi*t)*mi);
+s=I.*cos(2*pi*F0*t)-Q.*sin(2*pi*F0*t);
+%%s=A0.*sin(2*pi*F0*t+mi*sin(2*pi*t));
+figure
+plot(t,s);
+hold on
+plot(t,cos(2*pi*fi*t),  'r')
+hold off
+
+figure
+ff = [-length(s)/2:length(s)/2-1]*Fs/N;
+plot(ff,abs(fftshift(fft(s))))
+
