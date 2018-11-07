@@ -54,7 +54,7 @@ S = real(IQ) .* cos(2 * pi * f0 * t) - imag(IQ) .* sin(2 * pi * f0 * t);
 % 
 % figure
 % %***********************************************************************
-% ff = [-length(S) / 2 : length(S) / 2 - 1 ] * Fs / length(S); %ο³δοθρ ξρ³
+% ff = [-length(S) / 2 : length(S) / 2 - 1 ] * Fs / length(S); %Γ―Β³Γ€Γ―Γ¨Γ± Γ®Γ±Β³
 % %***********************************************************************
 % Spec = fftshift(fft(IQ));
 % Specf = fftshift(fft(IQf));
